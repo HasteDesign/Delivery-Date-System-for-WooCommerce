@@ -1,0 +1,558 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Haste Toolkit v0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-10 17:51-0300\n"
+"PO-Revision-Date: 2016-10-10 17:51-0300\n"
+"Last-Translator: Rafael Funchal <rafaelfunchal@gmail.com>\n"
+"Language-Team: WordPress Brasil Group\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Enchasteg: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ haste
+#: ../inc/classes/abstracts/abstract-front-end-form.php:293
+msgid "Submit"
+msgstr "Enviar"
+
+# @ haste
+#: ../inc/classes/abstracts/abstract-front-end-form.php:336
+msgid "Form submitted successfully!"
+msgstr "Formulário enviado com sucesso!"
+
+# @ haste
+#: ../inc/classes/abstracts/abstract-front-end-form.php:609
+#: ../inc/classes/abstracts/abstract-front-end-form.php:621
+#, php-format
+msgid "%s is required."
+msgstr "%s é um campo obrigatório."
+
+# @ haste
+#: ../inc/classes/abstracts/abstract-front-end-form.php:615
+#, php-format
+msgid "%s must be an email address valid."
+msgstr "%s precisa ser um endereço de email válido"
+
+# @ haste
+#: ../inc/classes/class-contact-form.php:182
+#, php-format
+msgid "Message sent by the form %s in %s at %s"
+msgstr "Mensagem enviada pelo formulário %s em %s às %s"
+
+# @ haste
+#: ../inc/classes/class-metabox.php:98 ../inc/classes/class-metabox.php:555
+#: ../inc/classes/class-term-meta.php:83 ../inc/classes/class-term-meta.php:490
+#: ../inc/classes/class-theme-options.php:85
+#: ../inc/classes/class-theme-options.php:614
+#: ../inc/classes/class-user-meta.php:68 ../inc/classes/class-user-meta.php:405
+msgid "Add images in gallery"
+msgstr "Adicionar imagens na galeria"
+
+# @ haste
+#: ../inc/classes/class-metabox.php:99 ../inc/classes/class-term-meta.php:84
+#: ../inc/classes/class-theme-options.php:86
+#: ../inc/classes/class-user-meta.php:69
+msgid "Add in gallery"
+msgstr "Adicionar na galeria"
+
+# @ haste
+#: ../inc/classes/class-metabox.php:100 ../inc/classes/class-metabox.php:516
+#: ../inc/classes/class-metabox.php:544 ../inc/classes/class-term-meta.php:85
+#: ../inc/classes/class-term-meta.php:451
+#: ../inc/classes/class-term-meta.php:479
+#: ../inc/classes/class-theme-options.php:87
+#: ../inc/classes/class-theme-options.php:565
+#: ../inc/classes/class-theme-options.php:603
+#: ../inc/classes/class-user-meta.php:70 ../inc/classes/class-user-meta.php:366
+#: ../inc/classes/class-user-meta.php:394
+msgid "Remove image"
+msgstr "Remover imagem"
+
+# @ haste
+#: ../inc/classes/class-metabox.php:101 ../inc/classes/class-term-meta.php:86
+#: ../inc/classes/class-theme-options.php:88
+#: ../inc/classes/class-user-meta.php:71
+msgid "Choose a file"
+msgstr "Selecione um arquivo"
+
+# @ haste
+#: ../inc/classes/class-metabox.php:102 ../inc/classes/class-term-meta.php:87
+#: ../inc/classes/class-theme-options.php:89
+#: ../inc/classes/class-user-meta.php:72
+msgid "Add file"
+msgstr "Adicionar arquivo"
+
+# @ haste
+#: ../inc/classes/class-metabox.php:493 ../inc/classes/class-term-meta.php:428
+#: ../inc/classes/class-theme-options.php:531
+#: ../inc/classes/class-user-meta.php:343
+msgid "Select file"
+msgstr "Selecionar arquivo"
+
+# @ haste
+#: ../inc/classes/class-metabox.php:516 ../inc/classes/class-term-meta.php:451
+#: ../inc/classes/class-theme-options.php:565
+#: ../inc/classes/class-user-meta.php:366
+msgid "Select image"
+msgstr "Selecionar imagem"
+
+#: ../inc/classes/class-post-status.php:69
+#, php-format
+msgid "&nbsp;<span class=\"count\">(%s)</span>"
+msgid_plural "&nbsp;<span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ haste
+#: ../inc/classes/class-post-type.php:67 ../inc/classes/class-post-type.php:74
+#: ../inc/classes/class-taxonomy.php:69 ../inc/classes/class-taxonomy.php:78
+#, php-format
+msgid "%ss"
+msgstr "%ss"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:68 ../inc/classes/class-taxonomy.php:70
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:69 ../inc/classes/class-taxonomy.php:72
+#, php-format
+msgid "View %s"
+msgstr "Ver %s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:70 ../inc/classes/class-taxonomy.php:73
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:71 ../inc/classes/class-taxonomy.php:74
+#, php-format
+msgid "Search %s"
+msgstr "Pesquisar %s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:72 ../inc/classes/class-taxonomy.php:75
+#, php-format
+msgid "Update %s"
+msgstr "Atualizar  %s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:73 ../inc/classes/class-taxonomy.php:76
+#: ../inc/classes/class-taxonomy.php:77
+#, php-format
+msgid "Parent %s:"
+msgstr "Parente %s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:75
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:76 ../inc/classes/class-taxonomy.php:79
+#, php-format
+msgid "Add New %s"
+msgstr "Adicionar Novo %s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:77 ../inc/classes/class-taxonomy.php:80
+#, php-format
+msgid "New %s"
+msgstr "Novo %s"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:78 ../inc/classes/class-taxonomy.php:81
+#, php-format
+msgid "All %ss"
+msgstr "Todos os %ss"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:79
+#, php-format
+msgid "No %s found"
+msgstr "Nenhum %s encontrado"
+
+# @ haste
+#: ../inc/classes/class-post-type.php:80
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Nenhum %s encontrado na Lixeira"
+
+# @ haste
+#: ../inc/classes/class-taxonomy.php:71
+#, php-format
+msgid "Add or Remove %ss"
+msgstr "Adicionar ou Remover %ss"
+
+# @ haste
+#: ../inc/classes/class-taxonomy.php:82
+#, php-format
+msgid "Separate %ss with comma"
+msgstr "Separe %ss com vírgula"
+
+# @ haste
+#: ../inc/classes/class-taxonomy.php:83
+#, php-format
+msgid "Choose from %ss most used"
+msgstr "Escolher entre os %ss mais usados"
+
+# @ haste
+#~ msgid "Not Found"
+#~ msgstr "Nada Encontrado"
+
+# @ haste
+#~ msgid ""
+#~ "It looks like nothing was found at this location. Maybe try a search?"
+#~ msgstr ""
+#~ "Parece que nada foi encontrado neste local. Talvez tentar uma pesquisa?"
+
+# @ haste
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Arquivos Diários: %s"
+
+# @ haste
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Arquivos Mensais: %s"
+
+# @ haste
+#~ msgctxt "monthly archives date format"
+#~ msgid "F Y"
+#~ msgstr "F Y"
+
+# @ haste
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Arquivos Anuais: %s"
+
+# @ haste
+#~ msgctxt "yearly archives date format"
+#~ msgid "Y"
+#~ msgstr "Y"
+
+# @ haste
+#~ msgid "Archives"
+#~ msgstr "Arquivos"
+
+# @ haste
+#~ msgid "URL:"
+#~ msgstr "URL:"
+
+# @ haste
+#~ msgid "Back to %s"
+#~ msgstr "Voltar para %s"
+
+# @ haste
+#~ msgid "<span class=\"meta-nav\">&larr;</span> %s"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> %s"
+
+# @ haste
+#~ msgid "All posts by %s"
+#~ msgstr "Todas as publicações por %s"
+
+# @ haste
+#~ msgid "Category Archives: %s"
+#~ msgstr "Arquivo da Categoria: %s"
+
+# @ haste
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view all comments."
+#~ msgstr ""
+#~ "Esse post é protegido por senha. Informe a senha para ver todos os "
+#~ "comentários."
+
+# @ haste
+#~ msgid "0 Comments"
+#~ msgstr "0 Comentários"
+
+# @ haste
+#~ msgid "1 Comment"
+#~ msgstr "1 Comentário"
+
+# @ haste
+#~ msgid "% Comments"
+#~ msgstr "% Comentários"
+
+# @ haste
+#~ msgid "to"
+#~ msgstr "para"
+
+# @ haste
+#~ msgid "&larr; Old Comments"
+#~ msgstr "&larr; Comentários Antigos"
+
+# @ haste
+#~ msgid "New Comments &rarr;"
+#~ msgstr "Novos Comentários &rarr;"
+
+# @ haste
+#~ msgid "Comments closed."
+#~ msgstr "Comentários não são permitidos."
+
+# @ haste
+#~ msgid "Comment"
+#~ msgstr "Comentário"
+
+# @ haste
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+# @ haste
+#~ msgid "E-mail"
+#~ msgstr "E-mail"
+
+# @ haste
+#~ msgid "Website"
+#~ msgstr "Website"
+
+# @ haste
+#~ msgid "Nothing Found"
+#~ msgstr "Nada Encontrado"
+
+# @ haste
+#~ msgid ""
+#~ "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#~ msgstr ""
+#~ "Pronto para publicar o seu primeiro post? <a href=\"%1$s\">Comece agora "
+#~ "aqui</a>."
+
+# @ haste
+#~ msgid ""
+#~ "Sorry, but nothing matched your search terms. Please try again with some "
+#~ "different keywords."
+#~ msgstr ""
+#~ "Desculpe, mas nada foi encontrado com os termos da sua pesquisa. Por "
+#~ "favor, tente novamente com algumas palavras-chave diferentes."
+
+# @ haste
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching can help."
+#~ msgstr ""
+#~ "Parece que não conseguimos encontrar o que você está procurando. Talvez a "
+#~ "pesquisa pode ajudar."
+
+# @ haste
+#~ msgid "Pages:"
+#~ msgstr "Páginas:"
+
+# @ haste
+#~ msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Continue lendo <span class=\"meta-nav\">&rarr;</span>"
+
+# @ haste
+#~ msgid "Posted in:"
+#~ msgstr "Publicado em:"
+
+# @ haste
+#~ msgctxt "Used between list items, there is a space after the comma."
+#~ msgid ", "
+#~ msgstr ", "
+
+# @ haste
+#~ msgid "Tagged as:"
+#~ msgstr "Marcado como:"
+
+# @ haste
+#~ msgid "Leave a comment"
+#~ msgstr "Deixe um comentário"
+
+# @ haste
+#~ msgid "All rights reserved"
+#~ msgstr "Todos os direitos reservados"
+
+# @ haste
+#~ msgid ""
+#~ "Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Haste</a> "
+#~ "forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</"
+#~ "a>."
+#~ msgstr ""
+#~ "Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Haste</a> "
+#~ "forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</"
+#~ "a>."
+
+# @ haste
+#~ msgid "Main Menu"
+#~ msgstr "Menu Principal"
+
+# @ haste
+#~ msgid "Main Sidebar"
+#~ msgstr "Sidebar Principal"
+
+# @ haste
+#~ msgid "Site Main Sidebar"
+#~ msgstr "Sidebar principal do site"
+
+# @ haste
+#~ msgid "Skip to content"
+#~ msgstr "Pular para o conteúdo"
+
+# @ haste
+#~ msgid "Toggle navigation"
+#~ msgstr "Alternar navegação"
+
+# @ haste
+#~ msgid "Search:"
+#~ msgstr "Pesquisar:"
+
+# @ haste
+#~ msgid "Search"
+#~ msgstr "Pesquisa"
+
+# @ haste
+#~ msgid "Image total size: %s pixels"
+#~ msgstr "Tamanho total da imagem: %s pixels"
+
+# @ haste
+#~ msgid "Full image link"
+#~ msgstr "Link da imagem completa"
+
+# @ haste
+#~ msgid "&larr; Previous image"
+#~ msgstr "&larr; Imagem anterior"
+
+# @ haste
+#~ msgid "Next image &rarr;"
+#~ msgstr "Próxima imagem &rarr;"
+
+# @ haste
+#~ msgid "Search Results for: %s"
+#~ msgstr "Resultado de Busca por: %s"
+
+# @ haste
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Arquivo da Tag: %s"
+
+# @ haste
+#~ msgid "&laquo; Previous"
+#~ msgstr "&laquo; Anterior"
+
+# @ haste
+#~ msgid "Next &raquo;"
+#~ msgstr "Próximo &raquo;"
+
+# @ haste
+#~ msgid "Related Posts"
+#~ msgstr "Artigos Relacionados"
+
+# @ haste
+#~ msgid "Home"
+#~ msgstr "Início"
+
+# @ haste
+#~ msgid "%sCategory: %s%s"
+#~ msgstr "%sCategoria: %s%s"
+
+# @ haste
+#~ msgid "%sTag: %s%s"
+#~ msgstr "%sTag: %s%s"
+
+# @ haste
+#~ msgid "%sSearch result for: &quot;%s&quot;%s"
+#~ msgstr "%sResultado da busca para: &quot;%s&quot;%s"
+
+# @ haste
+#~ msgid "Posted by"
+#~ msgstr "Publicado por"
+
+# @ haste
+#~ msgid "404 Error"
+#~ msgstr "Erro 404"
+
+# @ haste
+#~ msgid "Page %s"
+#~ msgstr "Página %s"
+
+# @ haste
+#~ msgid "Add a menu"
+#~ msgstr "Adicionar um menu"
+
+#~ msgid "Facebook Like Box"
+#~ msgstr "Caixa de Curtir do Facebook"
+
+#~ msgid "This widget includes a facebook like box on your blog"
+#~ msgstr "Esse widget inclui a caixa de curtir do Facebook em seu site"
+
+#~ msgid "Title:"
+#~ msgstr "Título:"
+
+#~ msgid "Facebook Page URL:"
+#~ msgstr "URL da página do Facebook:"
+
+#~ msgid "Width:"
+#~ msgstr "Largura:"
+
+#~ msgid "Height:"
+#~ msgstr "Altura:"
+
+#~ msgid "Color Scheme:"
+#~ msgstr "Esquema de cores:"
+
+#~ msgid "Dark"
+#~ msgstr "Escuro"
+
+#~ msgid "Light"
+#~ msgstr "Claro"
+
+#~ msgid "Show Friends Faces"
+#~ msgstr "Exibir rostos dos amigos"
+
+#~ msgid "Show Posts"
+#~ msgstr "Exibir atualizações"
+
+#~ msgid "Show Header"
+#~ msgstr "Exibir cabeçalho"
+
+#~ msgid "Show Border"
+#~ msgstr "Exibir borda"
+
+# @ haste
+#~ msgid "Pingback:"
+#~ msgstr "Pingback:"
+
+# @ haste
+#~ msgid "Edit"
+#~ msgstr "Editar"
+
+# @ haste
+#~ msgid "in"
+#~ msgstr "em"
+
+# @ haste
+#~ msgid "at"
+#~ msgstr "as"
+
+# @ haste
+#~ msgid "said:"
+#~ msgstr "disse:"
+
+# @ haste
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Seu comentário está aguardando moderação."
+
+# @ haste
+#~ msgid "Respond"
+#~ msgstr "Responder"
+
+# @ haste
+#~ msgid "Sticky"
+#~ msgstr "Destacado"
+
+# @ haste
+#~ msgid "Posted in"
+#~ msgstr "Publicado em"
+
+# @ haste
+#~ msgid "by"
+#~ msgstr "por"

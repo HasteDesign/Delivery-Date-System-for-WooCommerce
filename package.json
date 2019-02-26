@@ -1,0 +1,53 @@
+{
+  "name": "haste-toolkit",
+  "version": "1.0.0",
+  "description": "[View the documentation](https://github.com/HasteDesign/Haste-Toolkit)",
+  "scripts": {
+    "sass": "node-sass --output-style compressed --source-map true -o assets/css src/scss | gnomon --type=elapsed-total --medium=10.0 --high=20.0",
+    "sass:admin": "node-sass --output-style compressed --source-map true -o assets/css includes/admin/scss | gnomon --type=elapsed-total --medium=10.0 --high=20.0",
+    "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers -r assets/css/*.css | gnomon --type=elapsed-total --medium=10.0 --high=20.0",
+    "lint": "eslint src/js | gnomon --type=elapsed-total --medium=10.0 --high=20.0",
+    "uglify:main": "uglifyjs src/js/*.js -m -c --source-map \"url=delivery.date.min.js.map\" -o assets/js/delivery.date.min.js | gnomon --type=elapsed-total --medium=10.0 --high=20.0",
+    "uglify": "npm run uglify:main",
+    "imagemin": "imagemin imagemin src/img/* --out-dir=assets/img | gnomon --type=elapsed-total --medium=10.0 --high=20.0",
+    "sync": "browser-sync start --files assets/css/*.css, assets/js/*.js, *.php",
+    "build:sass": "npm run sass && npm run sass:admin && npm run autoprefixer",
+    "build:js": "npm run lint && npm run uglify",
+    "build:images": "npm run imagemin && npm run icons",
+    "build:all": "npm run build:sass && npm run build:js && npm run build:images",
+    "watch": "concurrently --names \"SASS,JS\" -c \"white.bgMagenta.bold,black.bgYellow.bold\" \"npm run watch:sass\" \"npm run watch:js\"",
+    "watch:sass": "onchange \"src/**/*.scss\" \"includes/admin/scss/**/*.scss\" -- npm run build:sass",
+    "watch:js": "onchange \"src/**/*.js\" -- npm run build:js",
+    "watch:sync": "concurrently --names \"SASS,JS,SYNC\" -c \"white.bgMagenta.bold,black.bgYellow.bold,black.bgWhite.bold\" \"npm run watch:sass\" \"npm run watch:js\" \"npm run sync\""
+  },
+  "browserslist": {
+    "production": [
+      "last 2 versions"
+    ],
+    "development": [
+      "last 2 versions"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HasteDesign/Haste-Starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/HasteDesign/Haste-Starter",
+  "dependencies": {
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.24.7",
+    "concurrently": "^3.5.0",
+    "eslint": "^4.8.0",
+    "imagemin-cli": "^4.0.0",
+    "node-sass": "^4.5.3",
+    "onchange": "^5.2.0",
+    "postcss": "^6.0.12",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^11.0.0",
+    "precss": "^2.0.0",
+    "uglify-es": "^3.3.10"
+  }
+}
