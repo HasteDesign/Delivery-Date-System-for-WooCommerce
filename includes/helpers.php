@@ -11,7 +11,7 @@ function delivery_time_options() {
 		foreach( $times as $time ) {
 			$from = date('H:i', strtotime( $time['from'] ) );
 			$to = date('H:i', strtotime( $time['to'] ) );
-			$options[sanitize_title( $time['label'] )] = sprintf( __( '%1$s - From %2$s to %3$s', 'woocommerce-delivery-date' ), $time['label'], $from, $to );
+			$options[sanitize_title( $time['label'] )] = sprintf( __( '%1$s - From %2$s to %3$s', 'delivery-date-system' ), $time['label'], $from, $to );
 		}
 	}
 

@@ -23,7 +23,7 @@ function delivery_date_system_register_options_metabox() {
 	 */
 	$cmb_options = new_cmb2_box( array(
 		'id'           => 'delivery-date-system',
-		'title'        => esc_html__( 'Delivery Date', 'delivery-date-system' ),
+		'title'        => esc_html__( 'Delivery Dates', 'delivery-date-system' ),
 		'object_types' => array( 'options-page' ),
 		'option_key'      => 'delivery_date', // The option key and admin menu page slug.
 		'parent_slug'     => 'woocommerce', // Make options page a submenu item of the themes menu.
@@ -86,7 +86,7 @@ function delivery_date_system_register_options_metabox() {
     ) );
 
     $cmb_options->add_field( array(
-        'name' => __( 'Delivery Times', 'woocommerce-delivery-system' ),
+        'name' => __( 'Delivery Times', 'delivery-date-system' ),
         'id'   => 'delivery_times_title',
         'type' => 'title',
     ) );
@@ -94,30 +94,30 @@ function delivery_date_system_register_options_metabox() {
     $delivery_times = $cmb_options->add_field( array(
         'id'          => 'delivery_times',
         'type'        => 'group',
-        'description' => __( 'Define the available delivery times.', 'woocommerce-delivery-system' ),
+        'description' => __( 'Define the available delivery times.', 'delivery-date-system' ),
         'options'     => array(
-            'group_title'       => __( 'Delivery Time {#}', 'woocommerce-delivery-system' ), // since version 1.1.4, {#} gets replaced by row number
-            'add_button'        => __( 'Add Another Time', 'woocommerce-delivery-system' ),
-            'remove_button'     => __( 'Remove Time', 'woocommerce-delivery-system' ),
+            'group_title'       => __( 'Delivery Time {#}', 'delivery-date-system' ), // since version 1.1.4, {#} gets replaced by row number
+            'add_button'        => __( 'Add Another Time', 'delivery-date-system' ),
+            'remove_button'     => __( 'Remove Time', 'delivery-date-system' ),
             'sortable'          => true,
             'closed'         => true, // true to have the groups closed by default
         ),
     ) );
     
     $cmb_options->add_group_field( $delivery_times, array(
-        'name' => __( 'Label', 'woocommerce-delivery-system' ),
+        'name' => __( 'Label', 'delivery-date-system' ),
         'id'   => 'label',
         'type' => 'text',
     ) );
     
     $cmb_options->add_group_field( $delivery_times, array(
-        'name' => __( 'From', 'woocommere-delivery-system' ),
+        'name' => __( 'From', 'delivery-date-system' ),
         'id' => 'from',
         'type' => 'text_time'
     ) );
 
     $cmb_options->add_group_field( $delivery_times, array(
-        'name' => __( 'To', 'woocommere-delivery-system' ),
+        'name' => __( 'To', 'delivery-date-system' ),
         'id' => 'to',
         'type' => 'text_time'
     ) );

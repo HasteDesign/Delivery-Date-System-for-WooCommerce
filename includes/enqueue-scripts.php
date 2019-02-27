@@ -30,9 +30,9 @@ function delivery_date_system_js_data() {
 	$data = array();
 	$data['locale'] = get_locale();
 	$data['closeText'] = __( 'Close', 'delivery-date-system' );
-	$data['prevText'] = __( '&#x3C; Anterior', 'text-domain' );
-	$data['nextText'] = __( 'Próximo &#x3E;', 'text-domain' );
-	$data['currentText'] = __( 'Today', 'text-domain' );
+	$data['prevText'] = __( '&#x3C; Anterior', 'delivery-date-system' );
+	$data['nextText'] = __( 'Próximo &#x3E;', 'delivery-date-system' );
+	$data['currentText'] = __( 'Today', 'delivery-date-system' );
 	$data['monthNames'] = delivery_date_system_month_names();
 	$data['monthNamesShort'] = delivery_date_system_month_names('M');
 	$data['dayNames'] = delivery_date_system_day_names();
