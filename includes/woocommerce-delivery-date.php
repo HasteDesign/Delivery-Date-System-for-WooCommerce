@@ -43,8 +43,8 @@ add_action( 'woocommerce_checkout_process', 'delivery_date_system_validate_new_c
  * Save delivery date and time of order
  */
 function delivery_date_system_save_date_time_order( $order_id ) {
-    if ( $_POST['delivery_date'] ) update_post_meta( $order_id, '_delivery_date', esc_attr( $_POST['delivery_date'] ) );
-	if ( $_POST['delivery_time'] ) update_post_meta( $order_id, '_delivery_time', esc_attr($_POST['delivery_time'] ) );
+    if ( $_POST['delivery_date'] ) update_post_meta( $order_id, '_delivery_date', sanitize_text_field( $_POST['delivery_date'] ) );
+	if ( $_POST['delivery_time'] ) update_post_meta( $order_id, '_delivery_time', sanitize_text_field( $_POST['delivery_time'] ) );
 }
 add_action( 'woocommerce_checkout_update_order_meta', 'delivery_date_system_save_date_time_order' );
 
@@ -65,13 +65,13 @@ function delivery_date_system_order_email_info( $order, $sent_to_admin, $plain_t
     $time = delivery_time_label( $order->get_id() );
 
     if ( $plain_text === false ) {
-		echo '<h2>' . __( 'Entrega', 'delivery-date-system' ) . '</h2>';
+		echo '<h2>' . __( 'Delivery', 'delivery-date-system' ) . '</h2>';
         echo '<p>';
-        printf( esc_html__( 'Sua entrega será feita no dia %1$s, no período da %2$s.', 'delivery-date-system' ), $date, $time );
+        printf( esc_html__( 'Your order will be delivered in %1$s, at %2$s.', 'delivery-date-system' ), $date, $time );
         echo '</p>';
 	} else {
-		echo __( 'Entrega', 'delivery-date-system' ) . '\n';
-		printf( esc_html__( 'Sua entrega será feita no dia %1$s, no período da %2$s.', 'delivery-date-system' ), $date, $time );
+		echo __( 'Delivery', 'delivery-date-system' ) . '\n';
+		printf( esc_html__( 'Your order will be delivered in %1$s, at %2$s.', 'delivery-date-system' ), $date, $time );
 	}
 }
 add_action( 'woocommerce_email_after_order_table', 'delivery_date_system_order_email_info', 10, 4 );
