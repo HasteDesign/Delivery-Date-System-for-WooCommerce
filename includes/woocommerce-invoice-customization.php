@@ -2,6 +2,11 @@
 
 /**
  * Add the delivery date and time to the printable invoice template
+ * for WooCommerce Delivery Notes integration.
+ *
+ * @param [type] $fields
+ * @param [type] $order
+ * @return void
  */
 function delivery_date_system_invoice_delivery_info( $fields, $order ) {
     $new_fields = array();
@@ -24,9 +29,12 @@ function delivery_date_system_invoice_delivery_info( $fields, $order ) {
 }
 add_filter( 'wcdn_order_info_fields', 'delivery_date_system_invoice_delivery_info', 10, 2 );
 
-
 /**
  * Adds coupon info to the delivery note / invoice
+ *
+ * @param [type] $fields
+ * @param [type] $order
+ * @return void
  */
 function delivery_date_system_invoice_coupon_info( $fields, $order ) {
     $new_fields = array();

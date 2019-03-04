@@ -6,7 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Enqueue scripts.
+ * Enqueue delivery date system scripts
+ *
+ * @return void
  */
 function delivery_date_system_enable_datepicker() {
 	if ( function_exists( 'is_woocommerce' ) ) {
@@ -23,7 +25,9 @@ function delivery_date_system_enable_datepicker() {
 add_action( 'wp_enqueue_scripts', 'delivery_date_system_enable_datepicker', 10 );
 
 /**
- * Pass plugin options to JavaScript.
+ * Pass options and translated strings to JavaScript
+ *
+ * @return void
  */
 function delivery_date_system_js_data() {
 	// jQuery UI Datepicker options

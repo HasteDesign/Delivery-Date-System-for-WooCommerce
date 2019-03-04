@@ -1,6 +1,10 @@
 <?php
+
 /**
- * Display Checkout Calendar if Shipping Selected
+ * Display the delivery date and period fields in checkout.
+ *
+ * @param [object] $checkout
+ * @return void
  */
 function delivery_date_system_echo_fields( $checkout ) {
 	echo '<div class="delivery-options">';
@@ -31,7 +35,9 @@ function delivery_date_system_echo_fields( $checkout ) {
 add_action( 'woocommerce_before_order_notes', 'delivery_date_system_echo_fields', 5 );
 	
 /**
- * Validate delivery date fields.
+ * Validates delivery date fields
+ *
+ * @return void
  */
 function delivery_date_system_new_checkout_fields() {
 	if ( isset( $_POST['delivery_date'] ) && empty( $_POST['delivery_date'] ) ) wc_add_notice( __( 'Escolha uma data de entrega disponível', 'delivery-date-system' ), 'error' );
@@ -40,7 +46,10 @@ function delivery_date_system_new_checkout_fields() {
 add_action( 'woocommerce_checkout_process', 'delivery_date_system_validate_new_checkout_fields' );
 
 /**
- * Save delivery date and time of order
+ * Save delivery date and time in order meta.
+ *
+ * @param int $order_id
+ * @return void
  */
 function delivery_date_system_save_date_time_order( $order_id ) {
     if ( $_POST['delivery_date'] ) update_post_meta( $order_id, '_delivery_date', sanitize_text_field( $_POST['delivery_date'] ) );
@@ -49,7 +58,10 @@ function delivery_date_system_save_date_time_order( $order_id ) {
 add_action( 'woocommerce_checkout_update_order_meta', 'delivery_date_system_save_date_time_order' );
 
 /**
- * Display delivery date and time in admin order page
+ * Display delivery date and period in admin order view
+ *
+ * @param [type] $order
+ * @return void
  */
 function delivery_date_system_display_admin_order_meta( $order ) {
 	echo '<p><strong>' . __('Data da entrega', 'delivery-date-system' ) . '</strong> ' . get_post_meta( $order->get_id(), '_delivery_date', true ) . '</p>';
@@ -59,6 +71,12 @@ add_action( 'woocommerce_admin_order_data_after_billing_address', 'delivery_date
 
 /**
  * Display delivery date and time in order email
+ *
+ * @param [type] $order
+ * @param [type] $sent_to_admin
+ * @param [type] $plain_text
+ * @param [type] $email
+ * @return void
  */
 function delivery_date_system_order_email_info( $order, $sent_to_admin, $plain_text, $email ) {
 	$date = get_post_meta( $order->get_id(), '_delivery_date', true );

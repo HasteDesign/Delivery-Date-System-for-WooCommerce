@@ -1,7 +1,14 @@
 <?php
 
+// Prevents direct access
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
- * Return the delivery time options array.
+ * Return the delivery time options in an array
+ *
+ * @return array $options
  */
 function delivery_time_options() {
 	$times = delivery_date_system_get_option( 'delivery_times', '' );
@@ -20,6 +27,9 @@ function delivery_time_options() {
 
 /**
  * Return delivery time label to be displayed
+ *
+ * @param int $order_id
+ * @return string $period
  */
 function delivery_time_label( $order_id ) {
 	$period = get_post_meta( $order_id, '_delivery_time', true );
@@ -33,6 +43,9 @@ function delivery_time_label( $order_id ) {
 
 /**
  * Return an array of month names
+ *
+ * @param string $format The expected month format
+ * @return array $months
  */
 function delivery_date_system_month_names( $format = 'F' ) {
 	$months = array();
@@ -46,6 +59,9 @@ function delivery_date_system_month_names( $format = 'F' ) {
 
 /**
  * Returns an array of day names
+ * 
+ * @param string $format The expected day format
+ * @return void
  */
 function delivery_date_system_day_names( $format = 'l' ) {
 	$timestamp = strtotime( 'next Sunday' );
@@ -61,6 +77,8 @@ function delivery_date_system_day_names( $format = 'l' ) {
 
 /**
  * Returns an array of first letter day names
+ *
+ * @return array $days
  */
 function delivery_date_system_day_names_first_letter() {
 	$timestamp = strtotime( 'next Sunday' );
@@ -76,6 +94,10 @@ function delivery_date_system_day_names_first_letter() {
 
 /**
  * Returns an array of timestamps as formatted dates
+ *
+ * @param [type] $dates
+ * @param string $format
+ * @return array $formatted
  */
 function delivery_date_system_timestamp_to_datestring( $dates, $format = 'Y-m-d' ) {
 	$formatted = array();
