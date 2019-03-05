@@ -7,10 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * CMB2
  */
-if ( file_exists( plugin_dir_path( __FILE__ ) . 'vendor/cmb2/init.php' ) ) {
-	require_once plugin_dir_path( __FILE__ ) . 'vendor/cmb2/init.php';
-} elseif ( file_exists( plugin_dir_path( __FILE__ ) . 'vendor/CMB2/init.php' ) ) {
-	require_once plugin_dir_path( __FILE__ ) . 'vendor/CMB2/init.php';
+if ( file_exists( plugin_dir_path( __FILE__ ) . '../../../vendor/cmb2/init.php' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . '../../../vendor/cmb2/init.php';
+} elseif ( file_exists( plugin_dir_path( __FILE__ ) . '../../../vendor/CMB2/init.php' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . '../../../vendor/CMB2/init.php';
 }
 
 /**
