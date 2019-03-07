@@ -14,8 +14,8 @@ function delivery_date_system_echo_fields( $checkout ) {
 		'class'         => array('form-row-wide'),
 		'id'            => 'datepicker',
 		'required'      => true,
-		'label'         => __('Selecione um dos dias de entrega disponíveis', 'delivery-date-system' ),
-		'placeholder'   => __('Abrir calendário', 'delivery-date-system' ),
+		'label'         => __( 'Select one of the available delivery days', 'delivery-date-system' ),
+		'placeholder'   => __( 'Open calendar', 'delivery-date-system' ),
 		'autocomplete'  => 'off',
 	));
 	
@@ -25,7 +25,7 @@ function delivery_date_system_echo_fields( $checkout ) {
 			'class'         => array('form-row-wide'),
 			'id'            => 'delivery-time',
 			'required'      => true,
-			'label'         => __('Selecione um período de entrega', 'delivery-date-system' ),
+			'label'         => __( 'Select a delivery time', 'delivery-date-system' ),
 			'options'     	=> delivery_time_options()
 		));
 	}
@@ -39,9 +39,9 @@ add_action( 'woocommerce_before_order_notes', 'delivery_date_system_echo_fields'
  *
  * @return void
  */
-function delivery_date_system_new_checkout_fields() {
-	if ( isset( $_POST['delivery_date'] ) && empty( $_POST['delivery_date'] ) ) wc_add_notice( __( 'Escolha uma data de entrega disponível', 'delivery-date-system' ), 'error' );
-	if ( $_POST['delivery_time'] == '' ) wc_add_notice( __( 'Escolha uma período de entrega disponível', 'delivery-date-system' ), 'error' );
+function delivery_date_system_validate_new_checkout_fields() {
+	if ( empty( $_POST['delivery_date'] ) ) wc_add_notice( __( 'Select an available delivery date.', 'delivery-date-system' ), 'error' );
+	if ( empty( $_POST['delivery_time'] ) ) wc_add_notice( __( 'Select an available delivery time.', 'delivery-date-system' ), 'error' );
 }
 add_action( 'woocommerce_checkout_process', 'delivery_date_system_validate_new_checkout_fields' );
 
@@ -64,8 +64,8 @@ add_action( 'woocommerce_checkout_update_order_meta', 'delivery_date_system_save
  * @return void
  */
 function delivery_date_system_display_admin_order_meta( $order ) {
-	echo '<p><strong>' . __('Data da entrega', 'delivery-date-system' ) . '</strong> ' . get_post_meta( $order->get_id(), '_delivery_date', true ) . '</p>';
-	echo '<p><strong>' . __('Período da entrega', 'delivery-date-system' ) . '</strong> ' . delivery_time_label( $order->get_id() ) . '</p>';
+	echo '<p><strong>' . __( 'Delivery date:', 'delivery-date-system' ) . '</strong> ' . get_post_meta( $order->get_id(), '_delivery_date', true ) . '</p>';
+	echo '<p><strong>' . __( 'Delivery time:', 'delivery-date-system' ) . '</strong> ' . delivery_time_label( $order->get_id() ) . '</p>';
 }
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'delivery_date_system_display_admin_order_meta' );
 

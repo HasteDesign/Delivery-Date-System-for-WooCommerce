@@ -34,8 +34,8 @@ function delivery_date_system_js_data() {
 	$data = array();
 	$data['locale'] = get_locale();
 	$data['closeText'] = __( 'Close', 'delivery-date-system' );
-	$data['prevText'] = __( '&#x3C; Anterior', 'delivery-date-system' );
-	$data['nextText'] = __( 'Próximo &#x3E;', 'delivery-date-system' );
+	$data['prevText'] = __( '&#x3C; Previous', 'delivery-date-system' );
+	$data['nextText'] = __( 'Next &#x3E;', 'delivery-date-system' );
 	$data['currentText'] = __( 'Today', 'delivery-date-system' );
 	$data['monthNames'] = delivery_date_system_month_names();
 	$data['monthNamesShort'] = delivery_date_system_month_names('M');

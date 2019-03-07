@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function delivery_time_options() {
 	$times = delivery_date_system_get_option( 'delivery_times', '' );
-	$options = array();
+	$options = array( '' => __( 'Select an option...', 'delivery-date-system' ) );
 
 	if ( ! empty( $times ) ) {
 		foreach( $times as $time ) {
@@ -84,7 +84,7 @@ function delivery_date_system_day_names_first_letter() {
 	$timestamp = strtotime( 'next Sunday' );
 	$days = array();
 	
-	for ($i = 0; $i < 7; $i++) {
+	for ( $i = 0; $i < 7; $i++) {
 		$days[] = substr( date_i18n( 'l', $timestamp ), 0, 1 );
 		$timestamp = strtotime( '+1 day', $timestamp );
 	}
