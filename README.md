@@ -31,6 +31,6 @@ This section describes how to install the plugin and get it working.
 
 ### Frequently Asked Questions
 
-**This plugins affects my shipping methods?**
+**This plugin affects my shipping methods?**
 
 *No. This plugin will not interfere if your shipping method already calculates the delivery date. (But it will still display the fields, so maybe you don't want it).*
