@@ -1,12 +1,12 @@
 <p align="center">
-  <img alt="A calendar icon followed by the plugin title, Registrations for WooCommerce, over a violet and blue squares pattern." src="https://ps.w.org/registrations-for-woocommerce/assets/banner-772x250.png">
+  <img alt="A calendar icon followed by the plugin title, Registrations for WooCommerce, over a violet and blue squares pattern." src="https://github.com/HasteDesign/Delivery-Date-System-for-WooCommerce/blob/master/assets/images/banner-772-250.png?raw=true">
 </p>
 
-Registrations for WooCommerce
+Delivery Date System for WooCommerce
 ============================
 
 - Contributors: hastedesign, allysonsouza, anyssa
-- Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=allyson_as%40hotmail%2ecom&lc=US&item_name=WooCommerce%20Registrations%20by%20Haste&currency_code=BRL&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted
+- Donate link: [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=allyson_as%40hotmail%2ecom&lc=US&item_name=WooCommerce%20Registrations%20by%20Haste&currency_code=BRL&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 - Tags: woocommerce, delivery, orders, delivery date
 - Requires at least: 4.6
 - Tested up to: 5.1
