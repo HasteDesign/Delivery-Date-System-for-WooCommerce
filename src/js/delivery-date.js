@@ -9,7 +9,7 @@ if ( typeof define === "function" && define.amd ) {
     factory( jQuery.datepicker );
 }
 }( function( datepicker ) {
-    
+
     datepicker.regional[ delivery_data.locale ] = {
         closeText: delivery_data.closeText,
         prevText: delivery_data.prevText,
@@ -25,7 +25,7 @@ if ( typeof define === "function" && define.amd ) {
         firstDay: 0,
         isRTL: false,
         showMonthAfterYear: false,
-        yearSuffix: "" 
+        yearSuffix: ""
     };
 
     datepicker.setDefaults( datepicker.regional[ delivery_data.locale ] );
@@ -34,16 +34,18 @@ if ( typeof define === "function" && define.amd ) {
 } ) );
 
 jQuery(document).ready(function($) {
-    /** Days to be disabled as an array */
+    // Days to be disabled as an array
     var disableddates = delivery_data.excludedDates || null; // yyyy-mm-dd
     var disableddates_m_d_Y = delivery_data.excludedDates_m_d_Y || null; //m-d-yyyy
-    
+
     /**
-     * Remove past dates from a given array
+     * This function remove past dates from a given array.
+     * @param {Array}  An array of dates.
+     * @return {Array} An array of dates without past dates.
      */
     function removePastDates( dates ) {
         var today = Date.now();
-        
+
         for( var i = dates.length - 1; i >= 0; i-- ) {
             var temp_date = Date.parse( dates[i] );
 
@@ -53,68 +55,93 @@ jQuery(document).ready(function($) {
         }
 
         return dates;
-    }   
+    }
 
-    /**
-     * Return the maximum day of shipping available
-     */
+	/**
+	 * Return the maximum day of shipping available.
+	 * @return {int} Maximum shipping day from today.
+	 */
     function maximumShippingDay(){
         var max = parseInt( delivery_data.daysOffset ) + parseInt( delivery_data.daysSpan );
         max += removePastDates( disableddates ).length;
         return max;
     }
-    
-    /**
-     * Return an array of days to e disabled in shipping selection.
-     */
-    function disableSpecificDates(date) {
+
+	/**
+	 * Check if a given date is enabled or not to delivery.
+	 * The function will look if:
+	 * - Date is not set in the disableddates array (Set in plugin options panel);
+	 * - Date is an available weekday (Set in plugin options panel);
+	 * @param  {Date} date A date to be checked.
+	 * @return {boolean}     True if date is availbel, false if not.
+	 */
+    function isDateAvailable(date) {
         var m = date.getMonth();
         var d = date.getDate();
         var y = date.getFullYear();
-        
-        // First convert the date in to the m-d-yyyy format 
-        // Take note that we will increment the month count by 1 
+
+        // First convert the date in to the m-d-yyyy format
+        // Take note that we will increment the month count by 1
         var currentdate = (m + 1) + '-' + d + '-' + y;
 
-        // We will now check if the date belongs to disableddates array
+		if ( isCustomDisabledDate(currentdate) ) return [false];
+		if ( isAvailableWeekDay(date) ) return [true];
+
+        return [false];
+    }
+
+	/**
+	 * Check if given date is on disableddates array.
+	 * @param  {String}  date A date string in m-d-yyyy format
+	 * @return {Boolean}      True if disabled, false if not.
+	 */
+	function isCustomDisabledDate(date) {
+		// Check if the date belongs to disableddates array
         if ( null !== disableddates_m_d_Y ) {
             for ( var i = 0; i < disableddates_m_d_Y.length; i++ ) {
-                // Now check if the current date is in disableddates array. 
+                // Now check if the current date is in disableddates array.
                 if ( $.inArray(currentdate, disableddates_m_d_Y) != -1 ) {
-                    return [false];
+                    return true;
                 }
             }
         }
 
-        // In case the date is not present in disabled array, we will now check
-        // if it is one of the disabled weekdays
+		return false;
+	}
+
+	/**
+	 * Check if the day is in one of the available week days.
+	 * @param  {Date}  date A date object.
+	 * @return {Boolean}    True if available, false if not.
+	 */
+	function isAvailableWeekDay(date) {
         var weekdays = delivery_data.availableWeekdays;
         var day = date.getDay();
         var available = false;
 
         for ( var i = 0; i < weekdays.length; i++ ) {
             if ( day === parseInt( weekdays[i] ) ) {
-                return [true];
+                return true;
             }
         }
+	}
 
-        return [false];
-    }
-
+	/**
+	 * Starts the Datepicker
+	 */
     function openDatePicker() {
         $( '#datepicker' ).datepicker({
             dateFormat: delivery_data.dateFormat,
             maxDate: '+' + maximumShippingDay() + 'D',
             minDate: '+' + parseInt( delivery_data.daysOffset ) + 'D',
-            beforeShowDay: disableSpecificDates,
+            beforeShowDay: isDateAvailable,
             regional: delivery_data.locale,
         }).datepicker( "show" );
     }
 
+	// Event handlers
     $( '#datepicker' ).click( openDatePicker );
-
     $( '#datepicker' ).bind( 'touchstart', openDatePicker );
-
     $( '#datepicker' ).keypress(function openDatePicker() {
         return false
     });
