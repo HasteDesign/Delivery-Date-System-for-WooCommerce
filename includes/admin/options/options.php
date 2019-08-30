@@ -27,9 +27,9 @@ function delivery_date_system_register_options_metabox() {
 		'object_types' => array( 'options-page' ),
 		'option_key'      => 'delivery_date', // The option key and admin menu page slug.
 		'parent_slug'     => 'woocommerce', // Make options page a submenu item of the themes menu.
-		'capability'      => 'manage_options', // Cap required to view options-page.
+		'capability'      => 'manage_woocommerce', // Cap required to view options-page.
     ) );
-    
+
     // Days of Week to include
     $cmb_options->add_field( array(
         'name'    => __( 'Delivery Days', 'delivery-date-system' ),
@@ -103,13 +103,13 @@ function delivery_date_system_register_options_metabox() {
             'closed'         => true, // true to have the groups closed by default
         ),
     ) );
-    
+
     $cmb_options->add_group_field( $delivery_times, array(
         'name' => __( 'Label', 'delivery-date-system' ),
         'id'   => 'label',
         'type' => 'text',
     ) );
-    
+
     $cmb_options->add_group_field( $delivery_times, array(
         'name' => __( 'From', 'delivery-date-system' ),
         'id' => 'from',
