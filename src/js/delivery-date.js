@@ -127,6 +127,31 @@ jQuery(document).ready(function($) {
 	}
 
 	/**
+	 * Datepicker beforeShow cllback. Ensure that month without available
+	 * days are shown in datepicker. Reference: https://stackoverflow.com/a/47594956
+	 */
+	function beforeShowDatepicker(text, date) {
+		var today = new Date();
+		var count = 0;
+
+		while (true) {
+			if (isDateAvailable(today)[0] === true) {
+				break;
+			}
+
+			count++;
+			// next date in loop iteration
+			today.setDate(today.getDate() + 1);
+		}
+
+		// set defaultDate, count is no of days from today,
+		// so count 2 will be 2 days from now
+		return {
+			defaultDate: count
+		};
+	}
+
+	/**
 	 * Starts the Datepicker
 	 */
     function openDatePicker() {
@@ -134,6 +159,7 @@ jQuery(document).ready(function($) {
             dateFormat: delivery_data.dateFormat,
             maxDate: '+' + maximumShippingDay() + 'D',
             minDate: '+' + parseInt( delivery_data.daysOffset ) + 'D',
+			beforeShowDay: beforeShowDatepicker,
             beforeShowDay: isDateAvailable,
             regional: delivery_data.locale,
         }).datepicker( "show" );

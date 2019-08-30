@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
+- Improved JavaScript inline documentation.
+- Ensure that month without available dates are displayed as default in Datepicker.
 
 ## [1.0.0] - 25-02-2019
 ### Added
