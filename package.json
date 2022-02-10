@@ -42,7 +42,7 @@
     "concurrently": "^3.5.0",
     "eslint": "^4.8.0",
     "imagemin-cli": "^4.0.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "onchange": "^5.2.0",
     "postcss": "^6.0.12",
     "postcss-cli": "^6.1.2",
